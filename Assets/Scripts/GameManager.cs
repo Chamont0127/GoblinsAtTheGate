@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool gameIsActive;
 
     private AudioController audioController;
+    private UIController UIController;
 
     //private WaveSpawner WaveSpawner;
     #endregion
@@ -73,6 +75,7 @@ public class GameManager : MonoBehaviour
         cannonCost = cannonStartCost;
 
         audioController = GameObject.Find("Audio Controller").GetComponent<AudioController>();
+        UIController = GameObject.Find("GameCanvas").GetComponent<UIController>();
     }
 
     //Checks if lose condition is met
@@ -93,7 +96,7 @@ public class GameManager : MonoBehaviour
 
             if(endCondition == "lose")
             {
-                //Display lose game over UI
+                UIController.ShowGameOverMenu();
                 return;
             }
 
@@ -103,5 +106,11 @@ public class GameManager : MonoBehaviour
                 return;
             }
 
+        }
+
+    public void ReloadScene()
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
         }
 }

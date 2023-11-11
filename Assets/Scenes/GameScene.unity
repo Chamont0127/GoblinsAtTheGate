@@ -2281,6 +2281,9 @@ MonoBehaviour:
   creditsMenu: {fileID: 104338780}
   creditsMenuButton: {fileID: 310349316}
   creditsMenuBackButton: {fileID: 463205494}
+  gameOverMenu: {fileID: 258507165}
+  endMenuButton: {fileID: 1046732568}
+  exitGameButton: {fileID: 249405634}
   anim: {fileID: 0}
 --- !u!1 &843493653
 GameObject:
@@ -2397,7 +2400,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.244304, g: 0.7531937, b: 0.8490566, a: 0}
+  m_BackGroundColor: {r: 0.3037113, g: 0.64402246, b: 0.7075472, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2556,7 +2559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984381137}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20, y: -2, z: 10}
+  m_LocalPosition: {x: -20, y: -3, z: 10}
   m_LocalScale: {x: 2, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2831,7 +2834,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1046732569}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 779379114}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1046732569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4595,6 +4610,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1879256325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b55a3be27446e4b42bc817e762e6ad43,
+    type: 3}
+  m_PrefabInstance: {fileID: 16492301}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1879256327
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879256325}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 240.1308, y: 4.8204975, z: 127.870605}
+  m_Center: {x: 23.22752, y: -1.9102488, z: -8.538413}
 --- !u!1 &1881526406
 GameObject:
   m_ObjectHideFlags: 0

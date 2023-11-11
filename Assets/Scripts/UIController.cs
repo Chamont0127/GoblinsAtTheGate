@@ -27,6 +27,11 @@ public class UIController : MonoBehaviour
     [SerializeField] private Button creditsMenuButton;
     [SerializeField] private Button creditsMenuBackButton;
 
+    [Header("Game Over Menu Objects")]
+    [SerializeField] private GameObject gameOverMenu;
+    [SerializeField] private Button endMenuButton;
+    [SerializeField] private Button exitGameButton;
+
     [Header("Misc")]
     [SerializeField] private Animator anim;
     #endregion
@@ -79,6 +84,16 @@ public class UIController : MonoBehaviour
     {
         startMenu.SetActive(false);
         creditsMenu.SetActive(true);
+    }
+
+    public void ShowGameOverMenu()
+    {
+        gameOverMenu.SetActive(true);
+    }
+
+    public void RestartGame()
+    {
+        GameManager.ReloadScene();
     }
 
     public void ReturnToMenu()
