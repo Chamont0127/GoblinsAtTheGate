@@ -82,11 +82,9 @@ public class EnemyController : MonoBehaviour
 
     public void EnemyIsTargeted()
     {
-        print("test");
         if(this.name == "Goblin(Clone)")
         {
             canBeTargeted = false;
-            print("test2");
         }
         else    
             canBeTargeted = true;

@@ -13,7 +13,7 @@ public class CannonController : MonoBehaviour
     [SerializeField] private GameObject cannonBlastEffect;
     [SerializeField] private AudioController audioController;
     [SerializeField] private List<GameObject> listOfEnemies = new List<GameObject>();
-    private int enemyIndexTest = 0;
+    [SerializeField] private int enemyIndexTest = 0;
     #endregion
 
     //invokes get target and fire methods
@@ -23,61 +23,140 @@ public class CannonController : MonoBehaviour
 
         //Gets the target twice per second after 0 second delay
         //Fires every 5 seconds after 0 second delay
-        InvokeRepeating("TargetEnemy", 0, 0.5f);
         InvokeRepeating("Fire", 0, fireRate);
+        
     }
 
-    void TargetEnemy()
+    void Update()
     {
-        ScanForEnemies();
-        GetTargetEnemy(enemyIndexTest);
+        // foreach (GameObject enemy in listOfEnemies)
+        // {
+        //     if (enemy == null)
+        //     {
+        //         RemoveTarget(enemy);
+        //     }
+        // }
 
-    }
+        listOfEnemies.RemoveAll(item => item == null);
 
-    void ScanForEnemies()
-    {
-        listOfEnemies.Clear();
-
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
-        foreach (GameObject enemy in enemies)
+        if(listOfEnemies.Count > enemyIndexTest)
         {
-            listOfEnemies.Add(enemy);
+            GetTargetEnemy(enemyIndexTest);
+        }
+        else
+        {
+            enemyIndexTest = 0;
+            GetTargetEnemy(enemyIndexTest);
+        }
+        
+    }
+    
+    //Targeting V3
+    void AddTarget(GameObject _target)
+    {
+        listOfEnemies.Add(_target);
+    }
+
+    void RemoveTarget(GameObject _target)
+    {
+        listOfEnemies.Remove(_target);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Enemy")
+        {
+            AddTarget(other.gameObject);
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == "Enemy")
+        {
+            RemoveTarget(other.gameObject);
         }
     }
 
     void GetTargetEnemy(int i)
     {
-        int len = listOfEnemies.Count;
-
-        if (len <= 0)
+        if(listOfEnemies.Count == 0)
         {
             return;
         }
 
         target = listOfEnemies[i];
 
-        float distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
-
-        if (target != null && distanceToTarget <= range)
+        if(target == null)
         {
-            if (target.GetComponent<EnemyController>().CanBeTargeted)
-            {
-                target.GetComponent<EnemyController>().EnemyIsTargeted();
-                targetTransform = target.transform;
-            }
-            else
-            {
-                enemyIndexTest++;
-                if (enemyIndexTest < listOfEnemies.Count)
-                {
-                    GetTargetEnemy(enemyIndexTest);
-                }
-            }
+            return;
         }
+
+        if(target.GetComponent<EnemyController>().CanBeTargeted)
+        {
+            target.GetComponent<EnemyController>().EnemyIsTargeted();
+            targetTransform = target.transform;
+        }
+        else
+        {
+            enemyIndexTest++; 
+        }
+
+
     }
 
-    //Gets the target enemy
+    //Targeting V2
+    // void TargetEnemy()
+    // {
+    //     ScanForEnemies();
+    //     GetTargetEnemy(enemyIndexTest);
+
+    // }
+
+    // void ScanForEnemies()
+    // {
+    //     listOfEnemies.Clear();
+
+    //     GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+    //     foreach (GameObject enemy in enemies)
+    //     {
+    //         listOfEnemies.Add(enemy);
+    //     }
+    // }
+
+    // void GetTargetEnemy(int i)
+    // {
+    //     int len = listOfEnemies.Count;
+
+    //     if (len <= 0)
+    //     {
+    //         return;
+    //     }
+
+    //     target = listOfEnemies[i];
+
+    //     float distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
+
+    //     if (target != null && distanceToTarget <= range)
+    //     {
+    //         if (target.GetComponent<EnemyController>().CanBeTargeted)
+    //         {
+    //             target.GetComponent<EnemyController>().EnemyIsTargeted();
+    //             targetTransform = target.transform;
+    //         }
+    //         else
+    //         {
+    //             enemyIndexTest++;
+    //             if (enemyIndexTest < listOfEnemies.Count)
+    //             {
+    //                 GetTargetEnemy(enemyIndexTest);
+    //             }
+    //         }
+    //     }
+    // }
+
+    //Targeting V1
     // void GetTarget()
     // {
     //     //Gets all the enemies, sets the shortest distance to infinity and sets the closest enemy to null
