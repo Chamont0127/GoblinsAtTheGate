@@ -60,14 +60,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7dddba4b1e0ce64590ef432716525ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 12
+  range: 18
   fireRate: 1
   cannonBallSpawnPoint: {fileID: 6216698549093875849}
+  targetTransform: {fileID: 0}
   target: {fileID: 0}
   cannonBall: {fileID: 5546407524886180311, guid: c3742c03918d5f547b19dd4cc2564b58,
     type: 3}
   cannonBlastEffect: {fileID: 6688937524217802168, guid: 2e1aa331af720a04fb4e2ea61bbe691a,
     type: 3}
+  audioController: {fileID: 0}
+  listOfEnemies: []
 --- !u!1 &5707832807890148945
 GameObject:
   m_ObjectHideFlags: 0
