@@ -57,6 +57,7 @@ MonoBehaviour:
     type: 3}
   enemySoundOnHit: 1
   audioController: {fileID: 0}
+  canBeTargeted: 1
 --- !u!54 &5247172506921326066
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -84,8 +85,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.7518625, z: 1}
-  m_Center: {x: 0, y: 1.3759313, z: 0}
+  m_Size: {x: 0.3094604, y: 0.9556906, z: 0.4531221}
+  m_Center: {x: -0.08744985, y: 0.36620677, z: 0.01710336}
 --- !u!1001 &2717804070442014188
 PrefabInstance:
   m_ObjectHideFlags: 0

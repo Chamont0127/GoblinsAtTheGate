@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
             get => lives;
             set
                 {
-                    if(value >= 0)
+                    if(value > 0)
                         lives = value;
                     else
                     {

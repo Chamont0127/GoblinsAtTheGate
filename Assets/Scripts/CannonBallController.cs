@@ -20,6 +20,12 @@ public class CannonBallController : MonoBehaviour
         {
             //gets direction to move in
             Vector3 dir = target.position - transform.position;
+
+            if(target.gameObject.name == "Colossus_Walk")
+            {
+                dir += new Vector3(0,2,0);
+            }
+            
             float distanceThisFrame = speed * Time.deltaTime; 
 
             //moves the cannonball to the target

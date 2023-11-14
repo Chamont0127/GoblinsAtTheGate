@@ -2656,7 +2656,7 @@ MonoBehaviour:
   countdown: 0
   waveIndex: 0
   startNextWave: 1
-  goblinsToSpawn: 05000000080000000a0000000f000000050000000f0000000f0000000f0000000f0000000a000000
+  goblinsToSpawn: 0a000000080000000a0000000f000000050000000f0000000f0000000f0000000f0000000a000000
   colossusToSpawn: 0100000005000000
   spawnPoint: {fileID: 1237289148}
   goblinSpawnDelay: 1
@@ -5426,13 +5426,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6636697928417314350, guid: a3a00a196eb852043bcf1e7763891c83,
         type: 3}
+      propertyPath: m_Size.x
+      value: 2.9146996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6636697928417314350, guid: a3a00a196eb852043bcf1e7763891c83,
+        type: 3}
       propertyPath: m_Size.y
-      value: 1.5385511
+      value: 3.1674552
+      objectReference: {fileID: 0}
+    - target: {fileID: 6636697928417314350, guid: a3a00a196eb852043bcf1e7763891c83,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.38355446
       objectReference: {fileID: 0}
     - target: {fileID: 6636697928417314350, guid: a3a00a196eb852043bcf1e7763891c83,
         type: 3}
       propertyPath: m_Center.y
-      value: 2.455326
+      value: 1.6408741
       objectReference: {fileID: 0}
     - target: {fileID: 6636697928417314351, guid: a3a00a196eb852043bcf1e7763891c83,
         type: 3}

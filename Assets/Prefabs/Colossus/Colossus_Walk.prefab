@@ -893,8 +893,8 @@ GameObject:
   - component: {fileID: 1514531129349164647}
   - component: {fileID: 1337018736258998165}
   - component: {fileID: 3195933449582087458}
-  - component: {fileID: 6381386496559590863}
-  - component: {fileID: 1777641560453625278}
+  - component: {fileID: 6149192960819723553}
+  - component: {fileID: 4647002017777717555}
   m_Layer: 0
   m_Name: Colossus_Walk
   m_TagString: Enemy
@@ -962,7 +962,8 @@ MonoBehaviour:
     type: 3}
   enemySoundOnHit: 0
   audioController: {fileID: 0}
---- !u!54 &6381386496559590863
+  canBeTargeted: 1
+--- !u!54 &6149192960819723553
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -978,8 +979,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!65 &1777641560453625278
-BoxCollider:
+--- !u!136 &4647002017777717555
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -988,9 +989,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.4902189, z: 2.2927082}
-  m_Center: {x: 2.0798233e-15, y: 1.90933, z: 0.64635444}
+  m_Radius: 0.5
+  m_Height: 1.8246446
+  m_Direction: 1
+  m_Center: {x: 1.1368698e-15, y: 1.7136881, z: 0.33000004}
 --- !u!1 &2306520956629177999
 GameObject:
   m_ObjectHideFlags: 0
