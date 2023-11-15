@@ -5338,9 +5338,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 130010210, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
       propertyPath: m_text
-      value: '
-
-'
+      value: + Add Cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 130010210, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.2392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 130010210, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8705883
+      objectReference: {fileID: 0}
+    - target: {fileID: 130010210, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 130010210, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4282244863
       objectReference: {fileID: 0}
     - target: {fileID: 184174134, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -5399,16 +5413,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198281604, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
+      propertyPath: m_Colors.m_PressedColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198281604, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198281604, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
       propertyPath: m_Colors.m_PressedColor.g
-      value: 1
+      value: 0.6511247
       objectReference: {fileID: 0}
     - target: {fileID: 198281604, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
       propertyPath: m_Colors.m_PressedColor.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198281604, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
       propertyPath: m_Colors.m_DisabledColor.b
@@ -5461,7 +5479,7 @@ PrefabInstance:
     - target: {fileID: 198281605, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ae9170f5d5b758e4c9ad82672162e5cd,
+      objectReference: {fileID: 21300000, guid: f982933862f4b5542a7b0dc79c380106,
         type: 3}
     - target: {fileID: 468588690, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
       propertyPath: m_AnchoredPosition.y
