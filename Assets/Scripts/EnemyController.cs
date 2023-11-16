@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private bool enemySoundOnHit;
     [SerializeField] private AudioController audioController;
 
-    [SerializeField] private bool canBeTargeted = true;
+    [SerializeField] private bool enemyIsAttacking = false;
     #endregion
 
     #region [Variable Properties]
@@ -26,10 +26,10 @@ public class EnemyController : MonoBehaviour
         set => health = value;
     }
 
-    public bool CanBeTargeted
+    public bool EnemyIsAttacking
     {
-        get => canBeTargeted;
-        set => canBeTargeted = value;
+        get => enemyIsAttacking;
+        set => enemyIsAttacking = value;
     }
     #endregion
 
@@ -47,8 +47,17 @@ public class EnemyController : MonoBehaviour
     //TODO need to stop the enemy just short of the castle and do one damage per second (invoke? enemyAttack method every second?)
     void Update()
     {
-        transform.position += (Vector3.right * speed * Time.deltaTime);
         Vector3 pos = transform.position;
+
+        if(pos.x < 4)
+        {
+            transform.position += (Vector3.right * speed * Time.deltaTime);
+        }
+        else if(!enemyIsAttacking)
+        {
+            enemyIsAttacking = true;
+            PlayAnimation();
+        }
     }
 
     //damages the enemy and checks to see if enemy has any health left
@@ -80,13 +89,8 @@ public class EnemyController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void EnemyIsTargeted()
+    public void PlayAnimation()
     {
-        if(this.name == "Goblin(Clone)")
-        {
-            canBeTargeted = false;
-        }
-        else    
-            canBeTargeted = true;
+        print("Animation Playing");
     }
 }
