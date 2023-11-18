@@ -16,8 +16,6 @@ public class GameManager : MonoBehaviour
 
     private AudioController audioController;
     private UIController UIController;
-
-    //private WaveSpawner WaveSpawner;
     #endregion
 
     #region [VariableProperties]
@@ -113,4 +111,9 @@ public class GameManager : MonoBehaviour
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
         }
+    
+    public void PlayButtonSoundEffect()
+    {
+        audioController.PlayButtonClickSound();
+    }
 }

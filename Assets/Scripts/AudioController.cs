@@ -104,9 +104,13 @@ public class AudioController : MonoBehaviour
         effects[3].Play();
     }
 
+    public void PlayButtonClickSound()
+    {
+        effects[4].Play();
+    }
+
     public void PlayEndGameAudio()
     {
-        print("test");
         music[activeAudioIndex].Stop();
         music[5].volume = 1;
         music[5].Play();

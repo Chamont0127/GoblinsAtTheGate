@@ -101,4 +101,9 @@ public class UIController : MonoBehaviour
         creditsMenu.SetActive(false);
         startMenu.SetActive(true);
     }
+
+    public void PlayButtonSound()
+    {
+        GameManager.PlayButtonSoundEffect();
+    }
 }

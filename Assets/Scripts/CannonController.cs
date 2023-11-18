@@ -13,7 +13,6 @@ public class CannonController : MonoBehaviour
     [SerializeField] private GameObject cannonBlastEffect;
     [SerializeField] private AudioController audioController;
     [SerializeField] private List<GameObject> listOfEnemies = new List<GameObject>();
-    [SerializeField] private int enemyIndexTest = 0;
     [SerializeField] private Vector3 targetPosition;
     #endregion
 
