@@ -15,8 +15,14 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] private bool enemySoundOnHit;
     [SerializeField] private AudioController audioController;
+    [SerializeField] private int stopPositionX;
 
     [SerializeField] private bool enemyIsAttacking = false;
+
+    [SerializeField] private Animator animator;
+    [SerializeField] private Avatar[] avatar;
+
+    public Vector3 pos;
     #endregion
 
     #region [Variable Properties]
@@ -41,15 +47,17 @@ public class EnemyController : MonoBehaviour
 
         startingPos = transform.position;
         enemy = this.gameObject.GetComponent<EnemyController>();
+
+        animator = this.gameObject.GetComponent<Animator>();
     }
 
     //Moves enemy towards castle
     //TODO need to stop the enemy just short of the castle and do one damage per second (invoke? enemyAttack method every second?)
     void Update()
     {
-        Vector3 pos = transform.position;
+        pos = transform.position;
 
-        if(pos.x < 4)
+        if(pos.x < stopPositionX)
         {
             transform.position += (Vector3.right * speed * Time.deltaTime);
         }
@@ -92,5 +100,7 @@ public class EnemyController : MonoBehaviour
     public void PlayAnimation()
     {
         print("Animation Playing");
+        animator.avatar = avatar[1];
+        animator.SetBool("enemyIsAttacking", true);
     }
 }

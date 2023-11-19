@@ -104,6 +104,26 @@ PrefabInstance:
       propertyPath: speed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3195933449582087458, guid: 95023f0cfc8f61a4c8696dbaef67ab07,
+        type: 3}
+      propertyPath: stopPositionX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195933449582087458, guid: 95023f0cfc8f61a4c8696dbaef67ab07,
+        type: 3}
+      propertyPath: avatar.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195933449582087458, guid: 95023f0cfc8f61a4c8696dbaef67ab07,
+        type: 3}
+      propertyPath: avatar.Array.data[0]
+      value: 
+      objectReference: {fileID: 9000000, guid: 7c09e741acd337545a026a7dce0ba667, type: 3}
+    - target: {fileID: 3195933449582087458, guid: 95023f0cfc8f61a4c8696dbaef67ab07,
+        type: 3}
+      propertyPath: avatar.Array.data[1]
+      value: 
+      objectReference: {fileID: 9000000, guid: 64d6d3ff387e5ff44b3e47cfaf7af537, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95023f0cfc8f61a4c8696dbaef67ab07, type: 3}
 --- !u!4 &6415161542814467830 stripped
