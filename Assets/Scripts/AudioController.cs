@@ -104,6 +104,11 @@ public class AudioController : MonoBehaviour
         effects[3].Play();
     }
 
+    public void PlayEnemyWeaponHitSound()
+    {
+        effects[5].Play();
+    }
+
     public void PlayButtonClickSound()
     {
         effects[4].Play();

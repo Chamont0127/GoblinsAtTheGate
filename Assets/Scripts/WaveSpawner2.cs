@@ -164,11 +164,13 @@ public class WaveSpawner2 : MonoBehaviour
     void SpawnGoblin()
     {
         Instantiate(goblinPrefab, spawnPoint.position, transform.rotation);
+        GameManager.NumActiveEnemies++;
     }
 
     //Spawns a colossus
     void SpawnColossus()
     {
         Instantiate(colossusPrefab, spawnPoint.position, transform.rotation);
+        GameManager.NumActiveEnemies++;
     }
 }    

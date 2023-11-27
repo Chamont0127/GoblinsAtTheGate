@@ -86,6 +86,7 @@ public class EnemyController : MonoBehaviour
     public void KillEnemy()
     {
         GameManager.Gold += goldRewardOnDeath;
+        GameManager.NumActiveEnemies--;
 
         if(enemySoundOnHit)
         {

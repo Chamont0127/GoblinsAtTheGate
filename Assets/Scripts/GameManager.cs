@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int cannonCost;
     [SerializeField] private int cannonStartCost = 100;
     [SerializeField] private bool gameIsActive;
+    [SerializeField] private int numActiveEnemies;
+    [SerializeField] private bool gameCanEnd;
 
     private AudioController audioController;
     private UIController UIController;
@@ -20,54 +22,56 @@ public class GameManager : MonoBehaviour
 
     #region [VariableProperties]
     public int Gold
-        {
-            get => gold;
-            set => gold = value;
-        }
+    {
+        get => gold;
+        set => gold = value;
+    }
 
     //setter logic to make sure lives does not go below 0
     public int Lives
+    {
+        get => lives;
+        set
         {
-            get => lives;
-            set
-                {
-                    if(value > 0)
-                        lives = value;
-                    else
-                    {
-                        lives = 0;
-                        if(gameIsActive)
-                            EndGame("lose");
-                    }
-                }
-        }
-    
-    //cannon cost doubles every time it is set
-    //BUG should fix later so it does not go past 400
-    public int CannonCost
-        {
-            get => cannonCost;
-
-            set
+            if (value > 0)
+                lives = value;
+            else
             {
-                if(value < 201)
-                {
-                    cannonCost = value * 2;
-                }
+                lives = 0;
+                if (gameIsActive)
+                    EndGame("lose");
             }
         }
+    }
+
+    //cannon cost doubles every time it is set
+    public int CannonCost
+    {
+        get => cannonCost;
+
+        set
+        {
+            if (value < 201)
+            {
+                cannonCost = value * 2;
+            }
+        }
+    }
 
     public bool GameIsActive
     {
         get => gameIsActive;
         set => gameIsActive = value;
     }
+
+    public int NumActiveEnemies { get => numActiveEnemies; set => numActiveEnemies = value; }
     #endregion
 
     // Sets gold, lives, and cannonCost to starting values
     void Start()
     {
         gameIsActive = false;
+        gameCanEnd = false;
         gold = startingGold;
         lives = startingLives;
         cannonCost = cannonStartCost;
@@ -79,39 +83,40 @@ public class GameManager : MonoBehaviour
     //Checks if lose condition is met
     void Update()
     {
-        //TODO only do this is the game is not over otherwise it will spam the shit out of this call
-        if (lives == 0)
-        {
-            //EndGame();
-        }
+         if (numActiveEnemies <= 0 && gameCanEnd)
+            { //TODO: Need to change this to display win game over UI
+                UIController.ShowGameOverMenu();
+            }
     }
 
     public void EndGame(string endCondition)
+    {
+        gameIsActive = false;
+
+        
+
+        if (endCondition == "lose")
         {
-            gameIsActive = false;
-
+            UIController.ShowGameOverMenu();
             audioController.PlayEndGameAudio();
-
-            if(endCondition == "lose")
-            {
-                UIController.ShowGameOverMenu();
-                return;
-            }
-
-            else if(endCondition == "win")
-            {
-                //Display win game over UI
-                return;
-            }
-
+            return;
         }
+
+        else if (endCondition == "win")
+        {
+            gameCanEnd = true;
+            audioController.PlayEndGameAudio();
+            return;
+        }
+
+    }
 
     public void ReloadScene()
-        {
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
-        }
-    
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+    }
+
     public void PlayButtonSoundEffect()
     {
         audioController.PlayButtonClickSound();

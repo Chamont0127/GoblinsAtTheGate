@@ -15,13 +15,21 @@ public class EnemyAudioController : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if(this.gameObject.tag == "left")
+        if (col.gameObject.tag == "Ground")
         {
-            audioController.PlayEnemyStepSoundLeft();
+            if (this.gameObject.tag == "left")
+            {
+                audioController.PlayEnemyStepSoundLeft();
+            }
+            else if (this.gameObject.tag == "right")
+            {
+                audioController.PlayEnemyStepSoundRight();
+            }
         }
-        else if(this.gameObject.tag == "right")
+
+        else if (this.gameObject.tag == "weapon")
         {
-            audioController.PlayEnemyStepSoundRight();
+            audioController.PlayEnemyWeaponHitSound();
         }
     }
 }
