@@ -80,10 +80,9 @@ public class CastleController : MonoBehaviour
     //if an enemy enters the trigger decrease lives by one and destroy the enemy
     void OnTriggerEnter(Collider coll)
     {
-        if (coll.gameObject.tag == "Enemy")
+        if (coll.gameObject.tag == "weapon")
         {   
             GameManager.Lives--;
-            Destroy(coll.gameObject);
         }
     }
 }

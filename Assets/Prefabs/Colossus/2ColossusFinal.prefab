@@ -1472,9 +1472,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5401700790193612081}
+  - component: {fileID: 4742669868431006819}
+  - component: {fileID: 4461002356661931971}
   m_Layer: 0
   m_Name: DEF_Feet_L
-  m_TagString: Untagged
+  m_TagString: left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1495,6 +1497,32 @@ Transform:
   m_Father: {fileID: 1311746984017132280}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4742669868431006819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347623428536753710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec92fab573a70804c95228e1a7ce46ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioController: {fileID: 0}
+--- !u!65 &4461002356661931971
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347623428536753710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0047722626, y: 0.004672384, z: 0.002042323}
+  m_Center: {x: -0.000017820665, y: -0.00067113945, z: 0.0006762309}
 --- !u!1 &2436700811546341206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,9 +1781,11 @@ GameObject:
   - component: {fileID: 299273732759142184}
   - component: {fileID: 5578084176864965850}
   - component: {fileID: 7198106593619612357}
+  - component: {fileID: 7763313647380439233}
+  - component: {fileID: 1009121482801460777}
   m_Layer: 0
   m_Name: Weapon
-  m_TagString: Untagged
+  m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1825,6 +1855,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7763313647380439233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2938680639605644949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec92fab573a70804c95228e1a7ce46ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioController: {fileID: 0}
+--- !u!65 &1009121482801460777
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2938680639605644949}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.006011528, y: 0.0059700143, z: 0.004404483}
+  m_Center: {x: 0.00021544045, y: -0.0001443802, z: 0.0093258945}
 --- !u!1 &2948132210162325254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,9 +2010,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4947726799437807467}
+  - component: {fileID: 740624589759866374}
+  - component: {fileID: 5740807467361137863}
   m_Layer: 0
   m_Name: DEF_Feet_R
-  m_TagString: Untagged
+  m_TagString: right
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1977,6 +2035,32 @@ Transform:
   m_Father: {fileID: 8372707634405739722}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &740624589759866374
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3047890087577348763}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0047722626, y: 0.0047589485, z: 0.0018411089}
+  m_Center: {x: -0.00001777567, y: 0.0006232933, z: -0.0006212675}
+--- !u!114 &5740807467361137863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3047890087577348763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec92fab573a70804c95228e1a7ce46ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioController: {fileID: 0}
 --- !u!1 &3061337454217528266
 GameObject:
   m_ObjectHideFlags: 0
@@ -4900,7 +4984,7 @@ GameObject:
   - component: {fileID: 8106631468630603174}
   m_Layer: 0
   m_Name: 2ColossusFinal
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4986,7 +5070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922c967de323c6b48ab075be949dcd63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 1
   health: 5
   goldRewardOnDeath: 100
   startingPos: {x: 0, y: 0, z: 0}
@@ -4996,12 +5080,9 @@ MonoBehaviour:
     type: 3}
   enemySoundOnHit: 0
   audioController: {fileID: 0}
-  stopPositionX: 0
+  stopPositionX: 0.9
   enemyIsAttacking: 0
   animator: {fileID: 0}
-  avatar:
-  - {fileID: 9000000, guid: 7c09e741acd337545a026a7dce0ba667, type: 3}
-  - {fileID: 9000000, guid: 64d6d3ff387e5ff44b3e47cfaf7af537, type: 3}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &9080089532704722801
 GameObject:

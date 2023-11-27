@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - left
   - right
+  - weapon
   layers:
   - Default
   - TransparentFX

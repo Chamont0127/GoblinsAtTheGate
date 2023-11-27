@@ -15,12 +15,11 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] private bool enemySoundOnHit;
     [SerializeField] private AudioController audioController;
-    [SerializeField] private int stopPositionX;
+    [SerializeField] private float stopPositionX;
 
     [SerializeField] private bool enemyIsAttacking = false;
 
     [SerializeField] private Animator animator;
-    [SerializeField] private Avatar[] avatar;
 
     public Vector3 pos;
     #endregion
@@ -99,8 +98,6 @@ public class EnemyController : MonoBehaviour
 
     public void PlayAnimation()
     {
-        print("Animation Playing");
-        animator.avatar = avatar[1];
         animator.SetBool("enemyIsAttacking", true);
     }
 }
