@@ -14,6 +14,8 @@ public class CannonController : MonoBehaviour
     [SerializeField] private AudioController audioController;
     [SerializeField] private List<GameObject> listOfEnemies = new List<GameObject>();
     [SerializeField] private Vector3 targetPosition;
+
+    [SerializeField] private Animator animator;
     #endregion
 
     //invokes get target and fire methods
@@ -25,6 +27,8 @@ public class CannonController : MonoBehaviour
         //Fires every 5 seconds after 0 second delay
         InvokeRepeating("Fire", 0, fireRate);
         InvokeRepeating("GetTarget", 0, 0.5f);
+
+        animator = gameObject.GetComponent<Animator>();
         
     }
 
@@ -69,6 +73,9 @@ public class CannonController : MonoBehaviour
             return;
         }
 
+        //Plays the fire animation
+        PlayShootAnim();
+
         // Instantiate the cannonball at the cannonball spawn point and sets cannonball controller
         GameObject CannonBallGO = (GameObject)Instantiate(cannonBall, cannonBallSpawnPoint.position, transform.rotation);
         CannonBallController CannonBall = CannonBallGO.GetComponent<CannonBallController>();
@@ -85,6 +92,8 @@ public class CannonController : MonoBehaviour
         {
             CannonBall.Seek(targetTransform);
         }
+
+        //animator.ResetTrigger("canFire");
     }
 
     //Shows range when cannon is selected in editor
@@ -92,5 +101,11 @@ public class CannonController : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+    void PlayShootAnim()
+    {
+        print("Fire!");
+        animator.SetTrigger("Fire");
     }
 }

@@ -5998,6 +5998,12 @@ PrefabInstance:
       objectReference: {fileID: 198281604}
     - target: {fileID: 6636697928417314353, guid: a3a00a196eb852043bcf1e7763891c83,
         type: 3}
+      propertyPath: cannonPrefab
+      value: 
+      objectReference: {fileID: 8628443809499566175, guid: 90e80e30f1fcf514faa9c130de450554,
+        type: 3}
+    - target: {fileID: 6636697928417314353, guid: a3a00a196eb852043bcf1e7763891c83,
+        type: 3}
       propertyPath: midSpawnPoint
       value: 
       objectReference: {fileID: 989899426}
