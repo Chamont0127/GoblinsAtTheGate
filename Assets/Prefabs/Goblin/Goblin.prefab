@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  health: 1
-  goldRewardOnDeath: 5
+  health: 3
+  goldRewardOnDeath: 10
   startingPos: {x: 0, y: 0, z: 0}
   enemy: {fileID: 0}
   GameManager: {fileID: 0}

@@ -2827,10 +2827,10 @@ MonoBehaviour:
   countdown: 0
   waveIndex: 0
   startNextWave: 1
-  goblinsToSpawn: 0300000005000000080000000a000000050000000a0000000c0000000f0000000f0000000a000000
+  goblinsToSpawn: 030000000500000008000000050000000500000008000000080000000a0000000f0000000a000000
   colossusToSpawn: 0100000005000000
   spawnPoint: {fileID: 1237289148}
-  goblinSpawnDelay: 1
+  goblinSpawnDelay: 3
   colossusSpawnDelay: 5
 --- !u!1 &989899426 stripped
 GameObject:
@@ -5858,7 +5858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 685257665, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.2
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 989899427, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
       propertyPath: m_RootOrder
@@ -5870,7 +5870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 989899427, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.6
+      value: 5.15
       objectReference: {fileID: 0}
     - target: {fileID: 989899427, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5886,7 +5886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1666339324, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1950698919, guid: a3a00a196eb852043bcf1e7763891c83, type: 3}
       propertyPath: m_AnchoredPosition.y

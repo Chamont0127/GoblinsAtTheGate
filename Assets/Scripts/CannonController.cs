@@ -69,13 +69,31 @@ public class CannonController : MonoBehaviour
     {
         if (targetTransform == null)
         {
-            print("Missing Target Transform");
             return;
         }
 
         //Plays the fire animation
         PlayShootAnim();
 
+        StartCoroutine(FireBall());
+    }
+
+    //Shows range when cannon is selected in editor
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+    void PlayShootAnim()
+    {
+        animator.SetTrigger("Fire");
+    }
+
+    IEnumerator FireBall()
+    {
+        yield return new WaitForSeconds(0.5f);
+        
         // Instantiate the cannonball at the cannonball spawn point and sets cannonball controller
         GameObject CannonBallGO = (GameObject)Instantiate(cannonBall, cannonBallSpawnPoint.position, transform.rotation);
         CannonBallController CannonBall = CannonBallGO.GetComponent<CannonBallController>();
@@ -93,19 +111,6 @@ public class CannonController : MonoBehaviour
             CannonBall.Seek(targetTransform);
         }
 
-        //animator.ResetTrigger("canFire");
-    }
-
-    //Shows range when cannon is selected in editor
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, range);
-    }
-
-    void PlayShootAnim()
-    {
-        print("Fire!");
-        animator.SetTrigger("Fire");
+        yield break;
     }
 }

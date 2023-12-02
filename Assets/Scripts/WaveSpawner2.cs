@@ -92,7 +92,7 @@ public class WaveSpawner2 : MonoBehaviour
                 }
                 waveIndex++;
                 Countdown = 5;
-                goblinSpawnDelay = 0.8f;
+                goblinSpawnDelay = 2.0f;
                 startNextWave = true;
                 break;
             }
@@ -118,6 +118,7 @@ public class WaveSpawner2 : MonoBehaviour
             //On the 10th wave spawns the final boss wave
             case 9:
             {
+                goblinSpawnDelay = 1.0f;
                 audioController.ChangeAudio(2);
                 UIController.SetWaveText();
                 for(int i = 0; i < goblinsToSpawn[waveIndex];i++)
@@ -152,6 +153,11 @@ public class WaveSpawner2 : MonoBehaviour
                 {
                     SpawnGoblin();
                     yield return new WaitForSeconds (goblinSpawnDelay);
+                }
+
+                if(waveIndex == 3 || waveIndex == 8)
+                {
+                    goblinSpawnDelay = 1.0f;
                 }
                 waveIndex++;
                 Countdown = 5;
