@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int gold;
     [SerializeField] private int startingGold = 200;
     [SerializeField] private int lives;
-    [SerializeField] private int startingLives = 10;
+    [SerializeField] private int startingLives = 100;
     [SerializeField] private int cannonCost;
     [SerializeField] private int cannonStartCost = 100;
     [SerializeField] private bool gameIsActive;

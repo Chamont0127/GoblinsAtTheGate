@@ -12,6 +12,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private WaveSpawner2 WaveSpawner;
 
     [Header("In Game UI")]
+    [SerializeField] private GameObject inGameUIObjects;
     [SerializeField] private TextMeshProUGUI livesText;
     [SerializeField] private TextMeshProUGUI goldText;
     [SerializeField] private TextMeshProUGUI cannonCostText;
@@ -43,13 +44,17 @@ public class UIController : MonoBehaviour
         WaveSpawner = GameObject.Find("Spawn").GetComponent<WaveSpawner2>();
 
         anim = GameObject.Find("Gold Text").GetComponent<Animator>();
+
+        startMenu.SetActive(true);
+        inGameUIObjects.SetActive(false);
+        addCannonButton.gameObject.SetActive(false);
     }
 
     //Updates lives, gold, and cannon cost text
     //Probably do not need to do this every frame. could call a method every time it needs to update. but it is fine for now
     void Update()
     {
-        livesText.text = "Lives: " + GameManager.Lives.ToString();
+        livesText.text = "Castle Health: " + GameManager.Lives.ToString();
         goldText.text = "Gold: " + GameManager.Gold.ToString();
         cannonCostText.text = "Cost: " + GameManager.CannonCost.ToString();
     }
@@ -60,6 +65,8 @@ public class UIController : MonoBehaviour
     {
         GameManager.GameIsActive = true;
         startMenu.SetActive(false);
+        inGameUIObjects.SetActive(true);
+        addCannonButton.gameObject.SetActive(true);
         WaveSpawner.Countdown = 5;
     }
 
