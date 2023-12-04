@@ -11,7 +11,21 @@ Mahlan Oung
 UX & UI:
 Eduardo Lopez
 
-[Wooden house tower]([url](https://poly.pizza/m/EV7pILnaZC)) by Quaternius 
+Wooden House Tower by Quaternius 
+https://poly.pizza/m/EV7pILnaZC
+https://poly.pizza/u/Quaternius
+
 Cannon by Poly by Google [CC-BY] via Poly Pizza 
+https://poly.pizza/m/00gto_PcYMp
+https://poly.pizza/u/Poly%20by%20Google
+https://creativecommons.org/licenses/by/3.0/
+
 Colossus pre Tilt Brush by Darwin Yamamoto [CC-BY] via Poly Pizza 
+https://poly.pizza/m/1JrbPYnWdeA
+https://poly.pizza/u/Darwin%20Yamamoto
+https://creativecommons.org/licenses/by/3.0/
+
 Simple Goblin by Thomas DR [CC-BY] via Poly Pizza
+https://poly.pizza/m/fBZ9BCVaeQp
+https://poly.pizza/u/Thomas%20DR
+https://creativecommons.org/licenses/by/3.0/
