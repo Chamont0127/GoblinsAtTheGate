@@ -11,16 +11,21 @@ Mahlan Oung
 UX & UI:
 Eduardo Lopez
 
-Wooden House Tower by Quaternius 
+Wooden House Tower by Quaternius
+Grass by Quaternius
+Gold Rocks by Quaternius
+Cave Scene by Brandon Jones (Toji) [CC-BY] via Poly Pizza
+Rock Large by Quaternius
+Duck with a gun by dook [CC-BY] via Poly Pizza
 https://poly.pizza/m/EV7pILnaZC
 https://poly.pizza/u/Quaternius
 
-Cannon by Poly by Google [CC-BY] via Poly Pizza 
+Cannon by Poly by Google [CC-BY] via Poly Pizza
 https://poly.pizza/m/00gto_PcYMp
 https://poly.pizza/u/Poly%20by%20Google
 https://creativecommons.org/licenses/by/3.0/
 
-Colossus pre Tilt Brush by Darwin Yamamoto [CC-BY] via Poly Pizza 
+Colossus pre Tilt Brush by Darwin Yamamoto [CC-BY] via Poly Pizza
 https://poly.pizza/m/1JrbPYnWdeA
 https://poly.pizza/u/Darwin%20Yamamoto
 https://creativecommons.org/licenses/by/3.0/

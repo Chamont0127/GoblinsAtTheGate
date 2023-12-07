@@ -1608,9 +1608,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Game Design & Programming: \nChase Dymont\n\n3D Art & Animation: \nMahlan
     Oung\n\nUX & UI:\nEduardo Lopez\n\nSounds Design and Music:\nAustin Bricker\n\nCredits
-    for 3D Models Used: (Links found in ReadMe doc)\nWooden house tower by Quaternius\nCannon
-    by Poly by Google [CC-BY] via Poly Pizza\nColossus pre Tilt Brush by Darwin Yamamoto
-    [CC-BY] via Poly Pizza\nSimple Goblin by Thomas DR [CC-BY] via Poly Pizza"
+    for 3D Models Used: (Links found in ReadMe doc)\nWooden house tower by Quaternius\nGrass
+    by Quaternius\r\nGold Rocks by Quaternius\r\nCave Scene by Brandon Jones (Toji)
+    [CC-BY] via Poly Pizza\r\nRock Large by Quaternius\r\nDuck with a gun by dook
+    [CC-BY] via Poly Pizza\nCannon by Poly by Google [CC-BY] via Poly Pizza\nColossus
+    pre Tilt Brush by Darwin Yamamoto [CC-BY] via Poly Pizza\nSimple Goblin by Thomas
+    DR [CC-BY] via Poly Pizza"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1637,8 +1640,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
